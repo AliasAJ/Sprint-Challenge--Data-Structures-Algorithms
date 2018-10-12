@@ -5,6 +5,8 @@ class BinarySearchTree:
     self.right = None
 
   def depth_first_for_each(self, cb):
+    # invoke callback on current node
+    cb(self.value)
     # apply callback to each node if self is not empty
     if self.left is not None:
       self.left.depth_first_for_each(cb)
